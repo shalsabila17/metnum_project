@@ -1,0 +1,236 @@
+/* Pengaturan Umum & Tipografi */
+body {
+    background-color: #f8fafc;
+    font-family: 'Urbanist', sans-serif;
+    color: #8aa9d4;
+    scroll-behavior: smooth;
+}
+
+/* Pola latar belakang titik halus sesuai gambar */
+.bg-dot-pattern {
+    background-color: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.bg-light-gradient {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Navbar */
+.logo-placeholder {
+    font-weight: 800;
+    font-size: 1.25rem;
+    background-color: #0c1e29;
+    color: white;
+    padding: 6px 14px;
+    letter-spacing: 0.5px;
+}
+
+.menu-title {
+    font-size: 0.95rem;
+    color: #334155;
+    letter-spacing: 1px;
+}
+
+.nav-link-custom {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover, .nav-link-custom.active {
+    color: #00667e;
+}
+
+.btn-hitung-nav {
+    background-color: #00667e;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-hitung-nav:hover {
+    background-color: #004d5f;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #00667e;
+    padding: 90px 20px;
+    border-bottom: 5px solid #f2d895;
+}
+
+.hero-section h1 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.btn-warning-custom {
+    background-color: #f2d895;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 12px 30px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-warning-custom:hover {
+    background-color: #feedcf;
+    transform: scale(1.03);
+}
+
+/* Section Utility */
+.section-title {
+    font-weight: 700;
+    color: #0c1e29;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #f2d895;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cards Tim */
+.card-tim {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card-tim:hover {
+    transform: translateY(-5px);
+}
+
+.avatar-icon {
+    font-size: 1.75rem;
+    background: #fef3c7;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* Teori Components */
+.alert-teori {
+    background-color: #52b788;
+    color: white;
+    border-radius: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.card-info {
+    background: #f8fafc;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.border-left-yellow { border-left: 5px solid #eddbb0; }
+.border-left-blue { border-left: 5px solid #3b82f6; }
+
+.math-text {
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+/* Tables Styling */
+.table-teori th {
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+    background-color: transparent !important;
+}
+
+.table-teori td {
+    padding: 12px 8px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table-pln {
+    background-color: #94deef !important;
+}
+
+table {
+    font-size: 0.88rem;
+}
+
+th {
+    font-weight: 600;
+    vertical-align: middle !important;
+    background-color: #f3fdff !important;
+}
+
+/* Kriteria Penghentian Boxes */
+.kriteria-box {
+    background: white;
+    border-left: 4px solid #52b788;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.info-note {
+    background-color: #fef9c3;
+    color: #713f12;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Kalkulator & Forms */
+.form-control-custom {
+    border: 1px solid #cbd5e1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.form-control-custom:focus {
+    border-color: #00667e;
+    box-shadow: 0 0 0 3px rgba(0, 102, 126, 0.15);
+}
+
+.text-pln {
+    color: #00667e;
+}
+
+.btn-pln {
+    background-color: #00667e;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-pln:hover {
+    background-color: #004d5f;
+    color: white;
+}
+
+.chart-container-custom {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT PLN - Metode Bisection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.2/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3 shadow-sm">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <div class="logo-placeholder me-3">IT PLN</div>
+            <span class="fw-bold tracking-wide text-uppercase menu-title">Metode Numerik</span>
+        </div>
+        <div class="ms-auto d-flex align-items-center gap-4">
+            <a href="#" class="nav-link-custom active">Home</a>
+            <a href="#tim" class="nav-link-custom">Tim</a>
+            <a href="#teori" class="nav-link-custom">Teori</a>
+            <a href="#kalkulator" class="btn btn-hitung-nav ms-2">Mulai Hitung</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-extrabold mb-3">Metode Bisection</h1>
+        <p class="lead opacity-90 mb-4">Penyelesaian Persamaan Nirlanjar menggunakan Algoritma Bagi Dua</p>
+        <a href="#kalkulator" class="btn btn-warning-custom px-4 py-2 fw-bold text-dark shadow">Buka Kalkulator</a>
+    </div>
+</header>
+
+<section id="tim" class="py-5 bg-light-gradient">
+    <div class="container text-center">
+        <h2 class="section-title mb-5">Anggota Kelompok</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="card-tim p-4 text-center">
+                    <div class="avatar-icon mb-3">👤</div>
+                    <h6 class="fw-bold m-0 text-dark"> M.      SIDIQ    MAULANA</h6>
+                    <small class="text-muted">202431191</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card-tim p-4 text-center">
+                    <div class="avatar-icon mb-3">👤</div>
+                    <h6 class="fw-bold m-0 text-dark">ZHALSABILA AMALIA PUTRI</h6>
+                    <small class="text-muted">202431181</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card-tim p-4 text-center">
+                    <div class="avatar-icon mb-3">👤</div>
+                    <h6 class="fw-bold m-0 text-dark">YOSEVA FAURENSIA SITOHANG</h6>
+                    <small class="text-muted">202431195</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card-tim p-4 text-center">
+                    <div class="avatar-icon mb-3">👤</div>
+                    <h6 class="fw-bold m-0 text-dark">TIMOTHY VINCEGILL SINAGA</h6>
+                    <small class="text-muted">202431199</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="teori" class="py-5 bg-dot-pattern">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Teori Metode Bisection</h2>
+        <div class="row g-4">
+            <div class="col-md-6 d-flex flex-column gap-4">
+                <div class="alert-teori p-4">
+                    Metode Bisection adalah metode pencarian akar dengan membagi interval menjadi dua bagian secara berulang.
+                </div>
+                <div class="card-info p-4 border-left-yellow">
+                    <span class="text-muted small fw-bold uppercase">Syarat Keberadaan Akar:</span>
+                    <h3 class="mt-2 text-center fw-bold math-text">f(a) × f(b) < 0</h3>
+                </div>
+                <div class="card-info p-4 border-left-blue">
+                    <span class="text-muted small fw-bold uppercase">Rumus Titik Tengah (c):</span>
+                    <h3 class="mt-2 text-center fw-bold math-text">c = (a + b) / 2</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h6 class="fw-bold text-dark mb-3">Tabel Simbol & Keterangan:</h6>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-teori m-0">
+                            <thead>
+                                <tr>
+                                    <th>Simbol</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="fw-bold">f(x)</td><td>Fungsi yang dicari akarnya</td></tr>
+                                <tr><td class="fw-bold">a</td><td>Batas bawah interval</td></tr>
+                                <tr><td class="fw-bold">b</td><td>Batas atas interval</td></tr>
+                                <tr><td class="fw-bold">c</td><td>Titik tengah interval</td></tr>
+                                <tr><td class="fw-bold">f(a) / f(b)</td><td>Nilai fungsi pada titik a / b</td></tr>
+                                <tr><td class="fw-bold">ε (Epsilon)</td><td>Toleransi Error</td></tr>
+                                <tr><td class="fw-bold">Iterasi</td><td>Jumlah pengulangan proses</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light-gradient">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <h4 class="fw-bold text-dark mb-4">Flowchart Proses</h4>
+                <div class="card border-0 shadow-sm p-4 text-center d-flex align-items-center justify-content-center" style="min-height: 440px;">
+                    <img src="alur.png" alt="Visualisasi Algoritma Bisection" class="img-fluid rounded" style="max-height: 400px; object-fit: contain;">
+                </div>
+            </div>
+            
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+                <div>
+                    <h4 class="fw-bold text-dark mb-4">Kriteria Penghentian Iterasi</h4>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="kriteria-box p-3">
+                            <div class="fw-bold text-dark mb-1">1. Lebar Interval</div>
+                            <code class="text-dark">| b - a | &lt; &epsilon;</code>
+                        </div>
+                        <div class="kriteria-box p-3">
+                            <div class="fw-bold text-dark mb-1">2. Nilai Fungsi</div>
+                            <code class="text-dark">| f(c) | &lt; &epsilon;</code>
+                        </div>
+                        <div class="kriteria-box p-3">
+                            <div class="fw-bold text-dark mb-1">3. Galat Relatif</div>
+                            <code class="text-dark">| (c_baru - c_lama) / c_baru | &lt; &epsilon;</code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-note p-3 mt-3">
+                    Iterasi akan dihentikan secara otomatis oleh sistem jika salah satu kondisi di atas terpenuhi.
+                </div>
+            </div>
+
+        </div> </div>
+</section>
+
+<section id="kalkulator" class="py-5">
+    <div class="container">
+        <div class="card shadow-lg p-4 p-md-5 border-0">
+            <h2 class="text-center mb-5 text-pln fw-bold tracking-wide">Kalkulator Bisection</h2>
+            
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold text-dark">Fungsi f(x)</label>
+                    <input type="text" id="fungsi" class="form-control form-control-custom" value="e^x - 5*x^2">
+                    <small class="text-muted d-block mt-1">Gunakan 'e' untuk eksponensial (Contoh: e^x - 5*x^2)</small>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold text-dark">Batas Bawah (a)</label>
+                    <input type="number" id="a" class="form-control form-control-custom" value="0" step="any">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold text-dark">Batas Atas (b)</label>
+                    <input type="number" id="b" class="form-control form-control-custom" value="1" step="any">
+                </div>
+            </div>
+            <div class="row mt-3 g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold text-dark">Toleransi Error (&epsilon;)</label>
+                    <input type="number" id="tol" class="form-control form-control-custom" value="0.00001" step="any">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold text-dark">Maksimum Iterasi</label>
+                    <input type="number" id="maxIter" class="form-control form-control-custom" value="20">
+                </div>
+            </div>
+            
+            <div class="text-center mt-4 pt-2">
+                <button class="btn btn-pln px-5 py-2.5 me-3" onclick="hitungBisection()">Hitung Sekarang</button>
+                <button class="btn btn-outline-secondary px-5 py-2.5" onclick="resetForm()">Reset</button>
+            </div>
+            
+            <hr class="my-5 opacity-10">
+            
+            <div id="hasil"></div>
+            
+            <h4 class="mt-5 mb-3 fw-bold text-pln">Tabel Iterasi</h4>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-pln text-white text-center">
+                        <tr>
+                            <th>No</th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>f(a)</th>
+                            <th>f(b)</th>
+                            <th>f(c)</th>
+                            <th>Rentang Baru</th>
+                            <th>Lebar Rentang</th>
+                            <th>Galat Relatif</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyIterasi" class="text-center"></tbody>
+                </table>
+            </div>
+            
+            <h4 class="mt-5 mb-3 fw-bold text-pln">Visualisasi Grafik</h4>
+            <div class="chart-container-custom">
+                <canvas id="grafik"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3 mt-5 small opacity-70">
+    &copy; 2026 ITPLN - Metode Numerik.
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Penambahan fungsi utilitas reset form agar tidak error saat diclick
+    function resetForm() {
+        document.getElementById("fungsi").value = "e^x - 5*x^2";
+        document.getElementById("a").value = "0";
+        document.getElementById("b").value = "1";
+        document.getElementById("tol").value = "0.00001";
+        document.getElementById("maxIter").value = "20";
+        document.getElementById("tbodyIterasi").innerHTML = "";
+        document.getElementById("hasil").innerHTML = "";
+        if(chart) chart.destroy();
+    }
+</script>
+</body>
+</html>
